@@ -32,11 +32,11 @@ const PlatformIconList = ({ platforms }: Props) => {
 
   return (
     <>
-      <HStack marginY={1}>
+      <HStack flexWrap='wrap' display="flex" justify='space-between' marginY={1}>
         {platforms.map((platform) => (
           <Icon
             as={iconMap[platform.slug]}
-            boxSize="1.3em"
+            boxSize="1em"
             color="gray.500"
           ></Icon>
         ))}
