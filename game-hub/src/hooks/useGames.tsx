@@ -7,11 +7,14 @@ export interface Platform {
   slug: string;
 }
 
-interface Game {
+ export interface Game {
   id: number;
   name: string;
   background_image: string;
-  parent_platforms: { platform: Platform };
+  parent_platforms: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [x: string]: any; platform: Platform 
+};
   metacritic: number;
   rating_top: number
 }
