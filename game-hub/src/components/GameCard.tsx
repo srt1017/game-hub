@@ -16,7 +16,6 @@ const GameCard = ({ game }: Props) => {
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           <PlatformIconList
             platforms={game.parent_platforms?.map(
               (p: { platform: any }) => p.platform
